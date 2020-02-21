@@ -46,6 +46,7 @@
       text-align: right;
       font-size: 16px;
       line-height: 24px;
+      color: #4A5059;
       &:not(:last-of-type){
         margin-bottom: 24px;
       }
@@ -320,9 +321,23 @@
     line-height: 34px;
   }
 }
-
+.commonTB-img{
+  overflow-x: hidden;
+}
 
 @media screen and (max-width: 1023px){
+  .commonTB_ind2 .commonTB-img-wrap, .commonTB_ab1 .commonTB-img-wrap, .commonTB_ab2 .commonTB-img-wrap{
+    width: 50%;
+    margin-right: -10%;
+  }
+  .commonTB_ind1 .commonTB-img-wrap{
+    width: 50%;
+    margin-left: -10%;
+  }
+  .commonTB_dop .commonTB-body__li svg{
+    width: 34px;
+    height: 34px;
+  }
   .commonTB-body__title{
     font-size: 32px;
     line-height: 36px;
@@ -340,11 +355,11 @@
   }
   .commonTB_dop{
     .commonTB-body-wrap{
-      width: 50%;
+      width: 55%;
     }
     .commonTB-img-wrap{
-      margin-left: -10%;
-      width: 55%;
+      margin-left: -20%;
+      width: 60%;
     }
     .commonTB-body__li .commonTB-body__p{
       font-size: 14px;
@@ -359,17 +374,18 @@
 
 @include w480{
   .centerTitle{
-    font-size: 24px !important;
+    font-size: 26px !important;
     line-height: 30px !important;
+  }
+  .commonTB-body__subtitle{
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 
 @media screen and (max-width: 600px){
   
-  .commonTB-body__subtitle{
-    font-size: 18px;
-    line-height: 22px;
-  }
+  
   .commonTB-img{
     position: static;
     transform: none;
@@ -393,5 +409,11 @@
   }
   .commonTB-body__text{
     text-align: left;
+  }
+  .commonTB_dop .commonTB-body__li{
+    display: block;
+  }
+  .commonTB_dop .commonTB-body__li svg{
+    float: left;
   }
 }
