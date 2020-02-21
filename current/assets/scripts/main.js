@@ -387,7 +387,7 @@ $(document).ready(function(){
     $(this).fadeIn('fast');
   })
 
-  function getHeight(){
+  /*function getHeight(){
     $('.general-form-block-slide_current').each(function(){
       if($(this).hasClass('general-form-block-slide_first')){
         $(this).closest('.general-form-block').height($(this).outerHeight() + 30);
@@ -395,9 +395,9 @@ $(document).ready(function(){
         $(this).closest('.general-form-block').height($(this).outerHeight());
       }
     })
-  }
+  }*/
 
-  getHeight();
+  //getHeight();
 
   $(document).on('click', '.form-slide-btns-item', function(){
     let slideId = $(this).data('slide-id');
@@ -405,7 +405,7 @@ $(document).ready(function(){
     $('.general-form-block-slide_second-' + slideId).addClass('general-form-block-slide_current');
     $(this).closest('.general-form-block-slide').fadeOut();
     setTimeout(() => {
-      getHeight();
+      //getHeight();
       $('.general-form-block-slide_current').fadeIn('slow');
     }, 400)
   })
@@ -426,22 +426,22 @@ $(document).ready(function(){
     $('.general-form-block-slide_first').addClass('general-form-block-slide_current');
     $(this).closest('.general-form-block-slide').fadeOut();
     setTimeout(() => {
-      getHeight();
+      //getHeight();
       $('.general-form-block-slide_current').fadeIn('slow');
     }, 400)
   })
   
 
   $(document).on('blur', '.general-form input', function(){
-    getHeight();
+    //getHeight();
   })
 
   $(document).on('click', '.general-form button', function(){
-    getHeight();
+    //getHeight();
   })
 
   $(document).on('change', '.general-form-checkblock__input', function(){
-    getHeight();
+    //getHeight();
   })
 
 
@@ -486,7 +486,7 @@ $(document).ready(function(){
   }
 
   $('.general-form-selector input').each(function(){
-    changeSelector($(this));
+    //changeSelector($(this));
   })
 
 
@@ -566,7 +566,7 @@ $(document).ready(function(){
        curH=(startH+(e.clientY-startY));
        if (curH < minH) curH=minH;
        textarea.style.height=curH+'px';
-       $(e.target).closest('.general-form-block').height($(e.target).closest('.general-form-block').find('.general-form-block-slide_current').height());
+       //$(e.target).closest('.general-form-block').height($(e.target).closest('.general-form-block').find('.general-form-block-slide_current').height());
        return false;
     }
   }

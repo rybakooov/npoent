@@ -321,7 +321,8 @@
     line-height: 34px;
   }
 }
-.commonTB-img{
+.commonTB{
+  
   overflow-x: hidden;
 }
 
@@ -384,8 +385,14 @@
 }
 
 @media screen and (max-width: 600px){
-  
-  
+  .centerTitle{
+    font-size: 22px !important;
+    line-height: 26px !important;
+  }
+  .commonTB-body__subtitle{
+    font-size: 18px;
+    line-height: 22px;
+  }
   .commonTB-img{
     position: static;
     transform: none;
