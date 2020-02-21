@@ -153,11 +153,10 @@
 
 
 @include w768{
-  .services-row{
-    display: block;
-  }
   .services-form{
-    margin-top: 40px;
+    .general-form-block{
+      max-width: none;
+    }
   }
   .services__title{
     font-size: 28px;
@@ -205,5 +204,20 @@
   }
   .services-form-adv-list__item:not(:last-child){
     margin-bottom: 14px;
+  }
+  .services-form{
+    flex: 1 1 360px;
+  }
+}
+
+@include w480{
+  .services-row{
+    display: block;
+  }
+  .services-form{
+    margin-top: 40px;
+    .general-form-block{
+      max-width: none;
+    }
   }
 }

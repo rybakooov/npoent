@@ -226,6 +226,7 @@
   &-checkblock{
     cursor: pointer;
     display: flex;
+    align-items: center;
     &_sogl{
       flex-wrap: wrap;
       .general-form-label__text{
@@ -299,7 +300,6 @@
       line-height: 125%;
       color: #4A5059;
       font-style: italic;
-      margin-top: 4px;
       span{
         display: none;
         font-weight: 300;

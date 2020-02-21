@@ -21,7 +21,7 @@
 .payment-grid{
   max-width: 1550px;
   margin: 0 auto;
-  padding: 0 70px 70px;
+  padding: 0 60px 70px;
   width: 100%;
   background-image: url(../images/half-circle1.svg);
   background-position: left center;
@@ -139,9 +139,6 @@
 }
 
 @include w1366{
-  .payment-grid{
-    padding: 0 20px 40px;
-  }
   .payment-grid-block-how-mobile{
     display: block;
   }
@@ -151,6 +148,9 @@
 }
 
 @include w768{
+  .payment-grid{
+    padding: 0 20px 40px;
+  }
   .payment-grid-block.payment-grid-block_bg{
     display: none;
   }

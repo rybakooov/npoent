@@ -79,8 +79,19 @@
   }
 }
 
+@include w1024{
+  .textImg-block-desc{
+    flex: 1 1 60%;
+  }
+  .textImg-block-imgbox{
+    flex: 1 1 40%;
+  }
+  .text{
+    padding: 40px 20px;
+  }
+}
 
-@include w1366{
+@include w768{
   .text{
     padding: 40px 20px;
   }
@@ -113,14 +124,14 @@
 }
 
 
-@include w768{
+@include w480{
   .text h1.text-block-desc__title{
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .text h2.text-block-desc__title{
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .text h4.text-block-desc__subtitle{
     font-size: 14px;
@@ -128,9 +139,14 @@
   }
   .text h3.text-block-desc__title{
     font-size: 22px;
+    margin-bottom: 10px;
     text-transform: uppercase;
   }
   .textImg-block-imgbox{
     height: 300px;
+  }
+
+  .text-block-desc__text{
+    font-size: 14px;
   }
 }
