@@ -122,14 +122,14 @@
 }
 
 .about > *:not(:first-child){
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 @media screen and (max-width: 1023px){
 
   .about > *:not(:first-child){
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .about-inNumber-wrap{
     display: flex !important;
@@ -184,8 +184,8 @@
     display: block !important;
   }
   .about > *:not(:first-child){
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .about-inNumber-wrap-item__num{
     font-size: 70px;

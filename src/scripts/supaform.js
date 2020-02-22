@@ -254,7 +254,6 @@ function raValidation (form){
   }
 
   form.find('.general-form-row-checkblockWithText').each(function(){
-    console.log($(this).data('valid'));
     if($(this).attr('data-valid') == 'false'){
       $(this).addClass('general-form-row-checkblockWithText_err');
       temp = false;
@@ -279,6 +278,17 @@ function raValidation (form){
     } 
   })
 
+  form.find('.general-form-selector[data-select-required]').each(function(){
+    if($(this).find('input').val() == ''){
+      $(this).find('.general-form-selector__view').addClass('input-err');
+      $(this).find('.general-form-label__text').show();
+      temp = false;
+    } else{
+      if ($(this).find('.general-form-selector__view').hasClass('input-err')) $(this).find('.general-form-selector__view').removeClass('input-err')
+      $(this).find('.general-form-label__text').hide();
+    }
+  })
+
 
 
   if( temp == false ){
@@ -290,6 +300,7 @@ function raValidation (form){
 }
 
 
+/*
 function getHeight(){
   $('.general-form-block-slide_current').each(function(){
     if($(this).hasClass('general-form-block-slide_first')){
@@ -298,7 +309,7 @@ function getHeight(){
       $(this).closest('.general-form-block').height($(this).outerHeight());
     }
   })
-}
+}*/
 
 /******************* Функция для sucsess *********************/
 function ifSuccess(form) {
@@ -316,7 +327,7 @@ function ifSuccess(form) {
     form.siblings('.general-form-block-slide-success').addClass('general-form-block-slide_current');
     form.fadeOut();
     setTimeout(() => {
-      getHeight();
+      //getHeight();
       form.siblings('.general-form-block-slide_current').fadeIn('slow');
     }, 400)
   }, 2000);

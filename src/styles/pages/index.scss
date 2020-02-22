@@ -1,4 +1,6 @@
-
+body{
+  font-weight: 350;
+}
 
 .index-banner{
   position: relative;
@@ -111,8 +113,8 @@
   }
 }
 .index > *:not(.index-banner){
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 @keyframes radial-pulse {
@@ -280,7 +282,6 @@
 
 
 .how-we-work{
-  padding-top: 50px;
   margin-bottom: 50px;
   &__title{
     font-size: 44px;
@@ -587,8 +588,8 @@
   }
   
   .index > *:not(.index-banner){
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .index-sale-block{
     display: flex;
@@ -753,6 +754,10 @@
   }
 }
 @media screen and (max-width: 767px){
+  .index > *:not(.index-banner){
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .how-we-work-item__circle{
     width: 86px;
     height: 86px;

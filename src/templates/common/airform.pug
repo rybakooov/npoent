@@ -137,12 +137,13 @@
               p.general-form-label__title Вид микроорганизма:
               input(type="text")
               .general-form-selector-wrap
-                .general-form-selector__view
+                .general-form-selector__view Вид микроорганизма:
                 .general-form-selector-list
                   .general-form-selector-list__item.general-form-selector-list__item_current бактерии
                   .general-form-selector-list__item грибы
                   .general-form-selector-list__item вирусы
                   .general-form-selector-list__item другое
+                p.general-form-label__text Данное поле является обязательным
             include main-form-part
           .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/obluchatel.png')")
       form.general-form-block-slide.general-form-block-slide_second-3
@@ -296,16 +297,17 @@
               p.general-form-label__title Производительность<span>*</span>:
               p.general-form-label__text Данное поле является обязательным
             .general-form-row-2
-              .general-form-selector
+              .general-form-selector(data-select-required)
                 p.general-form-label__title Количество человек<span>*</span>:
                 input(type="text")
-                .general-form-selector-wrap
-                  .general-form-selector__view
+                .general-form-selector-wrap 
+                  .general-form-selector__view Количество человек
                   .general-form-selector-list
                     .general-form-selector-list__item.general-form-selector-list__item_current 19
                     .general-form-selector-list__item 20
                     .general-form-selector-list__item 21
                     .general-form-selector-list__item 22
+                  p.general-form-label__text Данное поле является обязательным
               label.general-form-label
                 input(type="text" data-int placeholder="100 л/чел" data-postfix="л/чел").general-form-label__input
                 p.general-form-label__title Норма на человека:
@@ -344,26 +346,27 @@
       form.general-form-block-slide.general-form-block-slide_current
         .general-form-block-row
           .general-form-block-col
-            .general-form-selector
+            .general-form-selector(data-select-required)
               p.general-form-label__title Выберите услугу которую хотите заказть<span>*</span>:
               input(type="text")
               .general-form-selector-wrap
-                .general-form-selector__view
+                .general-form-selector__view Выберите услугу
                 .general-form-selector-list
                   .general-form-selector-list__item.general-form-selector-list__item_current Гидрообразивная резка0
                   .general-form-selector-list__item Гидрообразивная резка1
                   .general-form-selector-list__item Гидрообразивная резка2
                   .general-form-selector-list__item Гидрообразивная резка3
+                p.general-form-label__text Данное поле является обязательным
+            label.general-form-label
+              textarea.general-form-label__textarea
+              p.general-form-label__title Опишите технические требования
+              .general-form-label__resize
             .general-form-file
               label.general-form-file-label
                 input(type="file")
                 img(src="assets/images/file-input.svg", alt="")
                 p.general-form-file-label__text <span class="general-form-file-label__text_blue">Прикрепить</span> файл с <span class="general-form-file-label__text_bold">Техническим заданием</span>
               .general-form-file__close <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"/> </g> </g></svg>
-            label.general-form-label
-              textarea.general-form-label__textarea
-              p.general-form-label__title Опишите технические требования
-              .general-form-label__resize
             label.general-form-label
               input(type="text" data-required placeholder="Иванов Иван").general-form-label__input
               p.general-form-label__title Ваше Имя<span>*</span>:

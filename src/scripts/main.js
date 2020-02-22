@@ -496,6 +496,8 @@ $(document).ready(function(){
     changeSelector($(this).closest('.general-form-selector').find('input'));
     $(this).closest('.general-form-selector_open').removeClass('general-form-selector_open');
     $(this).closest('.general-form-selector').find('.general-form-selector-list').fadeOut('fast');
+    if ($(this).closest('.general-form-selector-wrap').find('.general-form-selector__view').hasClass('input-err')) $(this).closest('.general-form-selector-wrap').find('.general-form-selector__view').removeClass('input-err')
+    $(this).closest('.general-form-selector-wrap').find('.general-form-label__text').hide();
   })
 
   
@@ -534,7 +536,7 @@ $(document).ready(function(){
   var oldMouseUp=null;
 
   function textareaResizer(e){
-    $('.general-form-block').addClass('general-form-block_noTransition');
+    //$('.general-form-block').addClass('general-form-block_noTransition');
     if (e == null) { e = window.event }
     // Предотвращаем выполнение стандартного события
     if (e.preventDefault) {
@@ -575,7 +577,7 @@ $(document).ready(function(){
     //Восстанавливаем обработчики
     document.onmousemove=oldMouseMove;
     document.onmouseup=oldMouseUp;
-    $('.general-form-block').removeClass('general-form-block_noTransition');
+    //$('.general-form-block').removeClass('general-form-block_noTransition');
   }
 
   $('.general-form-label__resize').on('mousedown', function(event){

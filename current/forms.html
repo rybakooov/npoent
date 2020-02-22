@@ -249,13 +249,14 @@
                   <p class="general-form-label__title">Вид микроорганизма:</p>
                   <input type="text"/>
                   <div class="general-form-selector-wrap">
-                    <div class="general-form-selector__view"></div>
+                    <div class="general-form-selector__view">Вид микроорганизма:</div>
                     <div class="general-form-selector-list">
                       <div class="general-form-selector-list__item general-form-selector-list__item_current">бактерии</div>
                       <div class="general-form-selector-list__item">грибы</div>
                       <div class="general-form-selector-list__item">вирусы</div>
                       <div class="general-form-selector-list__item">другое</div>
                     </div>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
                   </div>
                 </div>
                 <label class="general-form-label">
@@ -566,17 +567,18 @@
                   <p class="general-form-label__text">Данное поле является обязательным</p>
                 </label>
                 <div class="general-form-row-2">
-                  <div class="general-form-selector">
+                  <div class="general-form-selector" data-select-required="data-select-required">
                     <p class="general-form-label__title">Количество человек<span>*</span>:</p>
                     <input type="text"/>
-                    <div class="general-form-selector-wrap">
-                      <div class="general-form-selector__view"></div>
+                    <div class="general-form-selector-wrap"> 
+                      <div class="general-form-selector__view">Количество человек</div>
                       <div class="general-form-selector-list">
                         <div class="general-form-selector-list__item general-form-selector-list__item_current">19</div>
                         <div class="general-form-selector-list__item">20</div>
                         <div class="general-form-selector-list__item">21</div>
                         <div class="general-form-selector-list__item">22</div>
                       </div>
+                      <p class="general-form-label__text">Данное поле является обязательным</p>
                     </div>
                   </div>
                   <label class="general-form-label">
@@ -682,19 +684,25 @@
           <form class="general-form-block-slide general-form-block-slide_current">
             <div class="general-form-block-row">
               <div class="general-form-block-col">
-                <div class="general-form-selector">
+                <div class="general-form-selector" data-select-required="data-select-required">
                   <p class="general-form-label__title">Выберите услугу которую хотите заказть<span>*</span>:</p>
                   <input type="text"/>
                   <div class="general-form-selector-wrap">
-                    <div class="general-form-selector__view"></div>
+                    <div class="general-form-selector__view">Выберите услугу</div>
                     <div class="general-form-selector-list">
                       <div class="general-form-selector-list__item general-form-selector-list__item_current">Гидрообразивная резка0</div>
                       <div class="general-form-selector-list__item">Гидрообразивная резка1</div>
                       <div class="general-form-selector-list__item">Гидрообразивная резка2</div>
                       <div class="general-form-selector-list__item">Гидрообразивная резка3</div>
                     </div>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
                   </div>
                 </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Опишите технические требования</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
                 <div class="general-form-file">
                   <label class="general-form-file-label">
                     <input type="file"/><img src="assets/images/file-input.svg" alt=""/>
@@ -702,11 +710,6 @@
                   </label>
                   <div class="general-form-file__close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"/> </g> </g></svg></div>
                 </div>
-                <label class="general-form-label">
-                  <textarea class="general-form-label__textarea"></textarea>
-                  <p class="general-form-label__title">Опишите технические требования</p>
-                  <div class="general-form-label__resize"></div>
-                </label>
                 <label class="general-form-label">
                   <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
                   <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>

@@ -1,4 +1,4 @@
-.input-err[data-required]{
+.input-err{
   border-color: #AA2E8E !important;
   &::placeholder{
     color: #AA2E8E !important;
@@ -59,7 +59,7 @@
   }
   &-row-2{
     display: flex;
-    margin: -10px -10px 15px;
+    margin: -10px -10px 5px;
     align-items: flex-start;
     flex-wrap: wrap;
     .general-form-label, .general-form-checkblock{
@@ -205,12 +205,18 @@
           margin: 0 auto;
           width: 220px;
           padding: 0;
+          &:hover{
+            span{
+              background: transparent;
+            }
+          }
           &:after{
             z-index: auto;
           }
           span{
             z-index: 1;
             width: 100%;
+            transition: .3s;
             height: 100%;
             display: block;
             padding: 14px 0;
@@ -308,7 +314,7 @@
     }
   }
   &-file{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -351,7 +357,7 @@
     }
   }
   &-label{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -420,7 +426,7 @@
       order: 0;
       font-weight: 600;
       color: #4A5059;
-      font-size: 16px;
+      font-size: 14px;
       margin-bottom: 10px;
       span.general-form-label__title_light{
         font-weight: 300;
@@ -439,7 +445,7 @@
       flex: 1;
       font-size: 14px;
       line-height: 14px;
-      margin-top: 15px;
+      margin-top: 10px;
       font-style: italic;
       color: #AA2E8E;
     }
@@ -488,7 +494,7 @@
     }
     &-list{
       position: absolute;
-      top: 34px;
+      top: 31px;
       display: none;
       left: 0;
       width: 100%;
@@ -514,10 +520,17 @@
   &__submit{
     border: 0;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 15px;
   }
 }
+.general-form-row-2 .general-form-checkblock{
+  height: 24px;
+}
 
+.general-form-row-2 .general-form-checkblock:nth-child(2),
+.general-form-row-2 .general-form-checkblock:nth-child(3){
+  margin-top: 0;
+}
 .general-form-block-slide{
   display: none;
 }
