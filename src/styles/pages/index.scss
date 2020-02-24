@@ -509,7 +509,7 @@ body{
     line-height: 18px;
   }
   .sixtangles-blocks-item__icon{
-    margin: 50px auto 20px;
+    margin: 3vmax auto 20px;
   }
   .index-banner .banner-slider-item__text{
     line-height: 24px;
@@ -745,9 +745,9 @@ body{
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
   .sixtangles-blocks-item__icon{
-    margin: 3vmax auto 10px;
+    margin: 2vmax auto 10px;
   }
   .sixtangles-blocks-item__text{
     font-size: 9px;
