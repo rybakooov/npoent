@@ -118,6 +118,9 @@
   display: none;
 }
 @media screen and (max-width: 1023px){
+  .footer-logo{
+    margin-top: auto;
+  }
   .footer-wrap{
     padding: 30px 20px 20px;
   }
