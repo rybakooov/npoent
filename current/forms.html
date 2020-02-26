@@ -61,7 +61,7 @@
     </header>
     <div class="general-form" id="airform">
       <div class="general-form-top">
-        <div class="general-form-top__title centerTitle">подобрать установку</div>
+        <div class="general-form-top__title catalog__title">подобрать установку</div>
         <div class="general-form-top__subtitle">для обеззараживания воздуха и поверхностей</div>
       </div>
       <div class="general-form-wrap">
@@ -251,7 +251,7 @@
                   <div class="general-form-selector-wrap">
                     <div class="general-form-selector__view">Вид микроорганизма:</div>
                     <div class="general-form-selector-list">
-                      <div class="general-form-selector-list__item general-form-selector-list__item_current">бактерии</div>
+                      <div class="general-form-selector-list__item">бактерии</div>
                       <div class="general-form-selector-list__item">грибы</div>
                       <div class="general-form-selector-list__item">вирусы</div>
                       <div class="general-form-selector-list__item">другое</div>
@@ -370,7 +370,7 @@
     </div>
     <div class="general-form" id="stoch-water">
       <div class="general-form-top">
-        <div class="general-form-top__title centerTitle">подобрать установку</div>
+        <div class="general-form-top__title catalog__title">подобрать установку</div>
         <div class="general-form-top__subtitle">для обеззараживания сточной воды</div>
       </div>
       <div class="general-form-wrap">
@@ -380,8 +380,8 @@
               <div class="general-form-block-col">
                 <div class="general-form-row-2">
                   <label class="general-form-label">
-                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 м/с" data-postfix="м/с"/>
-                    <p class="general-form-label__title">Скорость ленты<span>*</span>:</p>
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 м3/ч" data-postfix="м/ч"/>
+                    <p class="general-form-label__title">Производительность<span>*</span>:</p>
                     <p class="general-form-label__text">Данное поле является обязательным</p>
                   </label>
                   <label class="general-form-label">
@@ -398,12 +398,6 @@
                     <p class="general-form-label__text">Данное поле является обязательным</p>
                   </label>
                 </div>
-                <div class="general-form-row-title-oneInp"> 
-                  <label class="general-form-label">
-                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="1 000 кгс/см" data-postfix="кгс/см"/>
-                    <p class="general-form-label__title">Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span></p>
-                  </label>
-                </div>
                 <div class="general-form-row-2">
                   <label class="general-form-label">
                     <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="200 мг/л" data-postfix="мг/л"/>
@@ -414,6 +408,12 @@
                     <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="300 мг/л" data-postfix="мг/л"/>
                     <p class="general-form-label__title"><span class="general-form-label__title_light">ХПК</span><span>*</span>:</p>
                     <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <div class="general-form-row-title-oneInp"> 
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="1 000 кгс/см" data-postfix="кгс/см"/>
+                    <p class="general-form-label__title">Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span></p>
                   </label>
                 </div>
                 <label class="general-form-label">
@@ -458,7 +458,7 @@
     </div>
     <div class="general-form" id="pit-water">
       <div class="general-form-top">
-        <div class="general-form-top__title centerTitle">подобрать установку</div>
+        <div class="general-form-top__title catalog__title">подобрать установку</div>
         <div class="general-form-top__subtitle">для обеззараживания питьевой</div>
       </div>
       <div class="general-form-wrap">
@@ -468,8 +468,8 @@
               <div class="general-form-block-col">
                 <div class="general-form-row-2">
                   <label class="general-form-label">
-                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 м/с" data-postfix="м/с"/>
-                    <p class="general-form-label__title">Скорость ленты<span>*</span>:</p>
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 м3/ч" data-postfix="м3/ч"/>
+                    <p class="general-form-label__title">Производительность<span>*</span>:</p>
                     <p class="general-form-label__text">Данное поле является обязательным</p>
                   </label>
                   <label class="general-form-label">
@@ -491,7 +491,7 @@
                     <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
                     <p class="general-form-checkblock__text">Скважина</p>
                   </label>
-                  <label class="general-form-checkblock">
+                  <label class="general-form-checkblock longInput">
                     <input class="general-form-checkblock__input" type="checkbox" name="312"/>
                     <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
                     <p class="general-form-checkblock__text">Муниципальный водопровод</p>
@@ -501,7 +501,7 @@
                     <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
                     <p class="general-form-checkblock__text">Колодец</p>
                   </label>
-                  <label class="general-form-checkblock">
+                  <label class="general-form-checkblock longInput">
                     <input class="general-form-checkblock__input" type="checkbox" name="312"/>
                     <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
                     <p class="general-form-checkblock__text">Поверхностный источник (река, озеро, водохранилище)</p>
@@ -553,7 +553,7 @@
     </div>
     <div class="general-form" id="ship">      
       <div class="general-form-top">
-        <div class="general-form-top__title centerTitle">подобрать установку</div>
+        <div class="general-form-top__title catalog__title">подобрать установку</div>
         <div class="general-form-top__subtitle">для морских и речных судов</div>
       </div>
       <div class="general-form-wrap">
@@ -573,7 +573,7 @@
                     <div class="general-form-selector-wrap"> 
                       <div class="general-form-selector__view">Количество человек</div>
                       <div class="general-form-selector-list">
-                        <div class="general-form-selector-list__item general-form-selector-list__item_current">19</div>
+                        <div class="general-form-selector-list__item">19</div>
                         <div class="general-form-selector-list__item">20</div>
                         <div class="general-form-selector-list__item">21</div>
                         <div class="general-form-selector-list__item">22</div>
@@ -628,7 +628,7 @@
     </div>
     <div class="general-form" id="default-form">     
       <div class="general-form-top">
-        <div class="general-form-top__title centerTitle">Оставить заявку</div>
+        <div class="general-form-top__title catalog__title">Оставить заявку</div>
       </div>
       <div class="general-form-wrap">
         <div class="general-form-block">
@@ -677,7 +677,7 @@
     </div>
     <div class="general-form" id="zakazat">    
       <div class="general-form-top">
-        <div class="general-form-top__title centerTitle">Заказать услуги</div>
+        <div class="general-form-top__title catalog__title">Заказать услуги</div>
       </div>
       <div class="general-form-wrap">
         <div class="general-form-block">
@@ -690,7 +690,7 @@
                   <div class="general-form-selector-wrap">
                     <div class="general-form-selector__view">Выберите услугу</div>
                     <div class="general-form-selector-list">
-                      <div class="general-form-selector-list__item general-form-selector-list__item_current">Гидрообразивная резка0</div>
+                      <div class="general-form-selector-list__item">Гидрообразивная резка0</div>
                       <div class="general-form-selector-list__item">Гидрообразивная резка1</div>
                       <div class="general-form-selector-list__item">Гидрообразивная резка2</div>
                       <div class="general-form-selector-list__item">Гидрообразивная резка3</div>

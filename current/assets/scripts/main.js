@@ -386,18 +386,7 @@ $(document).ready(function(){
   $('.general-form-block-slide_current').each(function(){
     $(this).fadeIn('fast');
   })
-
-  /*function getHeight(){
-    $('.general-form-block-slide_current').each(function(){
-      if($(this).hasClass('general-form-block-slide_first')){
-        $(this).closest('.general-form-block').height($(this).outerHeight() + 30);
-      } else{
-        $(this).closest('.general-form-block').height($(this).outerHeight());
-      }
-    })
-  }*/
-
-  //getHeight();
+  
 
   $(document).on('click', '.form-slide-btns-item', function(){
     let slideId = $(this).data('slide-id');
@@ -481,13 +470,11 @@ $(document).ready(function(){
   })
 
   function changeSelector(selector){
-    selector.val(selector.next('.general-form-selector-wrap').find('.general-form-selector-list__item_current').html())
+    selector.attr('value', selector.next('.general-form-selector-wrap').find('.general-form-selector-list__item_current').html())
     selector.next('.general-form-selector-wrap').find('.general-form-selector__view').html(selector.next('.general-form-selector-wrap').find('.general-form-selector-list__item_current').html());
+    selector.next('.general-form-selector-wrap').find('.general-form-selector__view').css('color', '#2A2A68');
   }
 
-  $('.general-form-selector input').each(function(){
-    //changeSelector($(this));
-  })
 
 
   $(document).on('click', '.general-form-selector-list__item:not(.general-form-selector-list__item_current)', function(){
@@ -536,48 +523,36 @@ $(document).ready(function(){
   var oldMouseUp=null;
 
   function textareaResizer(e){
-    //$('.general-form-block').addClass('general-form-block_noTransition');
     if (e == null) { e = window.event }
-    // Предотвращаем выполнение стандартного события
     if (e.preventDefault) {
         e.preventDefault();
     };
-    // Определяем DIV, по которому кликнули
     resizer = (e.target != null) ? e.target : e.srcElement;
-    // Теперь по id определяем соответствующий textarea,
     textarea = e.target.parentNode.querySelector('.general-form-label__textarea');
-    // Запоминаем начальную позицию мыши и высоту поля
     startY=e.clientY;
     startH=textarea.offsetHeight;
-    // Запоминаем обработчики мыши
     oldMouseMove=document.onmousemove;
     oldMouseUp=document.onmouseup;
-    // Ставим свои
     document.onmousemove=textareaResizer_moveHandler;
     document.onmouseup=textareaResizer_cleanup;
     return false;
   }
 
-  minH=72; // минимальная высота поля
+  minH=72;
 
   function textareaResizer_moveHandler(e){
     if (e == null) { e = window.event }
     if (e.button <= 1){
-       //Начальная высота +
-       //расстояние, пройденное курсором по вертикали
        curH=(startH+(e.clientY-startY));
        if (curH < minH) curH=minH;
        textarea.style.height=curH+'px';
-       //$(e.target).closest('.general-form-block').height($(e.target).closest('.general-form-block').find('.general-form-block-slide_current').height());
        return false;
     }
   }
 
   function textareaResizer_cleanup(e) {
-    //Восстанавливаем обработчики
     document.onmousemove=oldMouseMove;
     document.onmouseup=oldMouseUp;
-    //$('.general-form-block').removeClass('general-form-block_noTransition');
   }
 
   $('.general-form-label__resize').on('mousedown', function(event){

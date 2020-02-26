@@ -117,7 +117,7 @@
         }
       }
       &-mobile{
-        display: none;
+        //display: none;
       }
       &__text{
         color: #4A5059;
@@ -137,8 +137,21 @@
     }
   }
 }
+.payment-grid-block-how__text:first-of-type:not(:last-child), .payment-grid-block-how:first-of-type:not(:last-child){
+  margin-bottom: 14px;
+}
+.payment-grid{
+  margin-top: -40px;
+}
+.payment-grid-block__title{
+  margin-bottom: 5px;
+}
 
 @include w1366{
+  .payment-grid{
+    margin-top: 0px;
+  }
+  
   .payment-grid-block-how-mobile{
     display: block;
   }
@@ -155,9 +168,14 @@
     display: none;
   }
   .payment-grid-wrap{
-    display: block;
+    //display: block;
   }
-
+  .payment-grid-block:nth-child(3){
+    margin-top: 95px !important;
+  }
+  .payment-grid-block__title, .payment-grid-block__subtitle{
+    white-space: nowrap;
+  }
 
 
   .index-textBlock_about.payment-textBlock .index-textBlock-imgbox-wrap{

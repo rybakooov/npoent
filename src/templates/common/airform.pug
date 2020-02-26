@@ -1,6 +1,6 @@
 .general-form#airform
   .general-form-top
-    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__title.catalog__title подобрать установку
     .general-form-top__subtitle для обеззараживания воздуха и поверхностей
   .general-form-wrap
     .general-form-block
@@ -139,7 +139,7 @@
               .general-form-selector-wrap
                 .general-form-selector__view Вид микроорганизма:
                 .general-form-selector-list
-                  .general-form-selector-list__item.general-form-selector-list__item_current бактерии
+                  .general-form-selector-list__item бактерии
                   .general-form-selector-list__item грибы
                   .general-form-selector-list__item вирусы
                   .general-form-selector-list__item другое
@@ -185,7 +185,7 @@
 
 .general-form#stoch-water
   .general-form-top
-    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__title.catalog__title подобрать установку
     .general-form-top__subtitle для обеззараживания сточной воды
   .general-form-wrap
     .general-form-block
@@ -194,8 +194,8 @@
           .general-form-block-col
             .general-form-row-2
               label.general-form-label
-                input(type="text" data-required data-int placeholder="1 000 м/с" data-postfix="м/с").general-form-label__input
-                p.general-form-label__title Скорость ленты<span>*</span>:
+                input(type="text" data-required data-int placeholder="1 000 м3/ч" data-postfix="м/ч").general-form-label__input
+                p.general-form-label__title Производительность<span>*</span>:
                 p.general-form-label__text Данное поле является обязательным
               label.general-form-label
                 input(type="text" data-required data-int placeholder="16 мДж/см2" data-postfix="мДж/см²").general-form-label__input
@@ -207,10 +207,6 @@
                 input(type="text" data-required data-int placeholder="1 000 мг/л" data-postfix="мг/л").general-form-label__input
                 p.general-form-label__title <span class="general-form-label__title_light">Взвешенные вещества (макс. кол-во)</span><span>*</span>
                 p.general-form-label__text Данное поле является обязательным
-            .general-form-row-title-oneInp 
-              label.general-form-label
-                input(type="text" data-int placeholder="1 000 кгс/см" data-postfix="кгс/см").general-form-label__input
-                p.general-form-label__title Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span>
             .general-form-row-2
               label.general-form-label
                 input(type="text" data-required data-int placeholder="200 мг/л" data-postfix="мг/л").general-form-label__input
@@ -220,6 +216,10 @@
                 input(type="text" data-required data-int placeholder="300 мг/л" data-postfix="мг/л").general-form-label__input
                 p.general-form-label__title <span class="general-form-label__title_light">ХПК</span><span>*</span>:
                 p.general-form-label__text Данное поле является обязательным
+            .general-form-row-title-oneInp 
+              label.general-form-label
+                input(type="text" data-int placeholder="1 000 кгс/см" data-postfix="кгс/см").general-form-label__input
+                p.general-form-label__title Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span>
             include main-form-part
           .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/stoch-water.png')")
       .general-form-block-slide.general-form-block-slide-success
@@ -230,7 +230,7 @@
 
 .general-form#pit-water
   .general-form-top
-    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__title.catalog__title подобрать установку
     .general-form-top__subtitle для обеззараживания питьевой
   .general-form-wrap
     .general-form-block
@@ -239,8 +239,8 @@
           .general-form-block-col
             .general-form-row-2
               label.general-form-label
-                input(type="text" data-required data-int placeholder="1 000 м/с" data-postfix="м/с").general-form-label__input
-                p.general-form-label__title Скорость ленты<span>*</span>:
+                input(type="text" data-required data-int placeholder="1 000 м3/ч" data-postfix="м3/ч").general-form-label__input
+                p.general-form-label__title Производительность<span>*</span>:
                 p.general-form-label__text Данное поле является обязательным
               label.general-form-label
                 input(type="text" data-required data-int placeholder="16 мДж/см2" data-postfix="мДж/см²").general-form-label__input
@@ -257,7 +257,7 @@
                 .general-form-checkblock__box
                   img(src="assets/images/checkbox.svg", alt="")
                 p.general-form-checkblock__text Скважина
-              label.general-form-checkblock
+              label.general-form-checkblock.longInput
                 input(type="checkbox", name="312").general-form-checkblock__input
                 .general-form-checkblock__box
                   img(src="assets/images/checkbox.svg", alt="")
@@ -267,7 +267,7 @@
                 .general-form-checkblock__box
                   img(src="assets/images/checkbox.svg", alt="")
                 p.general-form-checkblock__text Колодец
-              label.general-form-checkblock
+              label.general-form-checkblock.longInput
                 input(type="checkbox", name="312").general-form-checkblock__input
                 .general-form-checkblock__box
                   img(src="assets/images/checkbox.svg", alt="")
@@ -285,7 +285,7 @@
 
 .general-form#ship       
   .general-form-top
-    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__title.catalog__title подобрать установку
     .general-form-top__subtitle для морских и речных судов
   .general-form-wrap
     .general-form-block
@@ -303,7 +303,7 @@
                 .general-form-selector-wrap 
                   .general-form-selector__view Количество человек
                   .general-form-selector-list
-                    .general-form-selector-list__item.general-form-selector-list__item_current 19
+                    .general-form-selector-list__item 19
                     .general-form-selector-list__item 20
                     .general-form-selector-list__item 21
                     .general-form-selector-list__item 22
@@ -322,7 +322,7 @@
 
 .general-form#default-form      
   .general-form-top
-    .general-form-top__title.centerTitle Оставить заявку
+    .general-form-top__title.catalog__title Оставить заявку
   .general-form-wrap
     .general-form-block
       form.general-form-block-slide.general-form-block-slide_current
@@ -340,7 +340,7 @@
 
 .general-form#zakazat     
   .general-form-top
-    .general-form-top__title.centerTitle Заказать услуги
+    .general-form-top__title.catalog__title Заказать услуги
   .general-form-wrap
     .general-form-block
       form.general-form-block-slide.general-form-block-slide_current
@@ -352,7 +352,7 @@
               .general-form-selector-wrap
                 .general-form-selector__view Выберите услугу
                 .general-form-selector-list
-                  .general-form-selector-list__item.general-form-selector-list__item_current Гидрообразивная резка0
+                  .general-form-selector-list__item Гидрообразивная резка0
                   .general-form-selector-list__item Гидрообразивная резка1
                   .general-form-selector-list__item Гидрообразивная резка2
                   .general-form-selector-list__item Гидрообразивная резка3

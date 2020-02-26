@@ -12,36 +12,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /************************************** on blur ******************************************/
-
-/*
- *
- *
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
-*/
 
 /******************** Навешиваем маски на data-type="tel" и data-type="email" ****************/
 $(document).ready(function () {
@@ -64,12 +35,6 @@ $(document).ready(function () {
   })
   
 
-  /*
-	$(document).find('[data-type="email"]').inputmask({ 
-		alias: "email",
-		showMaskOnHover: false,
-		showMaskOnFocus: true
-  });*/
 });
 
 var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
@@ -224,22 +189,6 @@ $(document).on('input', '.general-form-row-checkblockWithText input', function()
 
 
 
-/******************* Функция валидации ******************/
-
-/* Эта функция вставляется в обработчик события клика по submit в таком виде:  
-  внутри функции клика на отправку
-
-      if(!raValidation($(this).closest('form'))){
-          return false;
-      }
-
-
-
- *
- * 
- * 
- * 
-*/
 
 function raValidation (form){
   let inputs = form.find('input[data-required="data-required"]'),
@@ -298,19 +247,6 @@ function raValidation (form){
   }
   
 }
-
-
-/*
-function getHeight(){
-  $('.general-form-block-slide_current').each(function(){
-    if($(this).hasClass('general-form-block-slide_first')){
-      $(this).closest('.general-form-block').height($(this).outerHeight() + 30);
-    } else{
-      $(this).closest('.general-form-block').height($(this).outerHeight());
-    }
-  })
-}*/
-
 /******************* Функция для sucsess *********************/
 function ifSuccess(form) {
   form.find('input, textarea, button').attr('disabled', 'disabled');

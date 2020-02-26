@@ -43,16 +43,17 @@ block content
                 form.general-form-block-slide.general-form-block-slide_current
                   .general-form-block-row
                     .general-form-block-col
-                      .general-form-selector
+                      .general-form-selector(data-select-required)
                         p.general-form-label__title Выберите услугу которую хотите заказть<span>*</span>:
-                        input(type="text")
+                        input(type="text" pattern="\S+.*")
                         .general-form-selector-wrap
-                          .general-form-selector__view
+                          .general-form-selector__view Выберите услугу
                           .general-form-selector-list
-                            .general-form-selector-list__item.general-form-selector-list__item_current Гидрообразивная резка0
+                            .general-form-selector-list__item Гидрообразивная резка0
                             .general-form-selector-list__item Гидрообразивная резка1
                             .general-form-selector-list__item Гидрообразивная резка2
                             .general-form-selector-list__item Гидрообразивная резка3
+                          p.general-form-label__text Данное поле является обязательным
                       .general-form-file
                         label.general-form-file-label
                           input(type="file")
@@ -85,9 +86,7 @@ block content
                       button(type="submit" data-type="submit").general-btn.general-btn_green.general-form__submit Отправить
                 .general-form-block-slide.general-form-block-slide-success
                   p.general-form-block-slide-success__title Ваша заявка<br>успешно отправлена
-                  p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время
-                  a(href="catalog-active.html").general-btn.general-btn_gradient.general-form-block-slide-success__btn 
-                    span Вернуться в раздел  
+                  p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время 
           .services-form-adv
             p.services-form-adv__title Преимущества работы с нами:
             ol.services-form-adv-list

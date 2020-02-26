@@ -102,17 +102,18 @@
                   <form class="general-form-block-slide general-form-block-slide_current">
                     <div class="general-form-block-row">
                       <div class="general-form-block-col">
-                        <div class="general-form-selector">
+                        <div class="general-form-selector" data-select-required="data-select-required">
                           <p class="general-form-label__title">Выберите услугу которую хотите заказть<span>*</span>:</p>
-                          <input type="text"/>
+                          <input type="text" pattern="S+.*"/>
                           <div class="general-form-selector-wrap">
-                            <div class="general-form-selector__view"></div>
+                            <div class="general-form-selector__view">Выберите услугу</div>
                             <div class="general-form-selector-list">
-                              <div class="general-form-selector-list__item general-form-selector-list__item_current">Гидрообразивная резка0</div>
+                              <div class="general-form-selector-list__item">Гидрообразивная резка0</div>
                               <div class="general-form-selector-list__item">Гидрообразивная резка1</div>
                               <div class="general-form-selector-list__item">Гидрообразивная резка2</div>
                               <div class="general-form-selector-list__item">Гидрообразивная резка3</div>
                             </div>
+                            <p class="general-form-label__text">Данное поле является обязательным</p>
                           </div>
                         </div>
                         <div class="general-form-file">
@@ -156,7 +157,7 @@
                   </form>
                   <div class="general-form-block-slide general-form-block-slide-success">
                     <p class="general-form-block-slide-success__title">Ваша заявка<br>успешно отправлена</p>
-                    <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время</p><a class="general-btn general-btn_gradient general-form-block-slide-success__btn" href="catalog-active.html"> <span>Вернуться в раздел  </span></a>
+                    <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время </p>
                   </div>
                 </div>
               </div>

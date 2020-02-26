@@ -32,7 +32,7 @@
     align-items: flex-start;
   }
   &-desc{
-    flex: 1 1 calc(100% - 600px);
+    flex: 1 1 calc(100% / 9 * 5 - 10px);
     margin-right: 20px;
     &-grid{
       display: flex;
@@ -76,6 +76,8 @@
       }
     }
     &-list{
+      margin-top: -24px !important;
+      margin-bottom: 24px !important;
       &__item{
         color: #4A5059;
         display: flex;
@@ -96,7 +98,7 @@
     }
   }
   &-form{
-    flex: 1 1 580px;
+    flex: 1 1 calc(100% / 9 * 4 - 10px);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-image: url(../images/circle-form.svg);
@@ -141,10 +143,10 @@
 }
 @include w1366{
   .services-desc{
-    flex: 1 1 calc(100% - 440px)
+    //flex: 1 1 calc(100% - 440px)
   }
   .services-form{
-    flex: 1 1 420px;
+    //flex: 1 1 420px;
   }
   .services-wrap{
     padding: 40px 20px;
@@ -152,7 +154,22 @@
 }
 
 
+@media screen and (max-width: 1200px){
+  .services-desc-grid-item__img{
+    width: 40px;
+    height: 40px;
+  }
+  .services-desc-grid-item__text{
+    font-size: 14px;
+  }
+}
+
+
 @include w768{
+  .services-form-adv__title{
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
   .services-form{
     .general-form-block{
       max-width: none;
@@ -169,6 +186,33 @@
     font-size: 14px;
     line-height: 24px;
   }
+  .services-form{
+    flex: 1 1 360px;
+  }
+  .general-form-block-col_img{
+    display: none;
+  }
+  .services__text, .services-desc-grid-item__text, .services-desc-list__item{
+    font-size: 14px;
+  }
+  .services-desc-list__item{
+    margin-bottom: 14px;
+  }
+  .services__text:not(:last-child){
+    margin-bottom: 24px;
+  }
+  .general-form-label__title{
+    font-size: 14px;
+  }
+  .general-form-file-label__text{
+    font-size: 14px;
+  }
+  .services-form-adv-list__item:not(:last-child){
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px){
+  
   .general-form-row-2{
     display: block;
     margin-left: 0;
@@ -187,37 +231,26 @@
     padding-right: 14px;
     padding-left: 14px;  
   }
-  .services__text, .services-desc-grid-item__text, .services-desc-list__item{
-    font-size: 14px;
-  }
-  .services-desc-list__item{
-    margin-bottom: 14px;
-  }
-  .services__text:not(:last-child){
-    margin-bottom: 24px;
-  }
-  .general-form-label__title{
-    font-size: 14px;
-  }
-  .general-form-file-label__text{
-    font-size: 14px;
-  }
-  .services-form-adv-list__item:not(:last-child){
-    margin-bottom: 14px;
-  }
-  .services-form{
-    flex: 1 1 360px;
+  .general-form-row-2{
+    margin: 0;
   }
 }
 
 @include w480{
+
+
+
+
   .services-row{
     display: block;
   }
   .services-form{
-    margin-top: 40px;
+    margin-top: 20px;
     .general-form-block{
       max-width: none;
     }
+  }
+  .services-form-adv{
+    margin-top: 20px;
   }
 }

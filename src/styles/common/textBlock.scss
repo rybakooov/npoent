@@ -260,7 +260,7 @@
         flex-shrink: 0;
         width: 48px;
         height: 48px;
-        margin-right: 10px;
+        margin-right: 24px;
         path{
           fill: #25a6de;
         }
@@ -323,12 +323,12 @@
     line-height: 34px;
   }
 }
-.commonTB{
-  
-  overflow-x: hidden;
-}
-
 @media screen and (max-width: 1023px){
+  .commonTB{
+    
+    overflow-x: hidden;
+  }
+  
   .commonTB_ind2 .commonTB-img-wrap, .commonTB_ab1 .commonTB-img-wrap, .commonTB_ab2 .commonTB-img-wrap{
     width: 50%;
     margin-right: -10%;
@@ -340,6 +340,7 @@
   .commonTB_dop .commonTB-body__li svg{
     width: 34px;
     height: 34px;
+    margin-right: 12px;
   }
   .commonTB-body__title{
     font-size: 32px;
@@ -430,5 +431,6 @@
   }
   .commonTB_dop .commonTB-body__li svg{
     float: left;
+    margin-right: 10px;
   }
 }
