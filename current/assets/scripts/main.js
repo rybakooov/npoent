@@ -199,6 +199,12 @@ $(document).ready(function(){
       {
         breakpoint: 767,
         settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
           slidesToShow: 2
         }
       }
