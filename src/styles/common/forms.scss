@@ -34,7 +34,7 @@
       margin-right: -9px;
     }
     .general-form-label__input{
-      width: 50%;
+      width: calc(50% - 10px);
     }
   }
   &-row-oneStroke{
@@ -131,6 +131,7 @@
       text-transform: uppercase;
       line-height: 100%;
       padding: 0 10px;
+      margin-top: -20px;
       font-size: 35px;
       color: #292B68;
       text-align: center;
@@ -704,6 +705,9 @@
 }
 
 @include w768{
+  .general-form-selector{
+    margin-bottom: 15px;
+  }
   #airform .form-slide-btns-item-wrap{
     width: 210px;
   }

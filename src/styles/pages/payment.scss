@@ -161,6 +161,9 @@
 }
 
 @include w768{
+  .payment-grid-block:nth-child(1){
+    flex: 1 1 100%;
+  }
   .payment-grid{
     padding: 0 20px 40px;
   }
@@ -171,7 +174,7 @@
     //display: block;
   }
   .payment-grid-block:nth-child(3){
-    margin-top: 95px !important;
+    //margin-top: 95px !important;
   }
   .payment-grid-block__title, .payment-grid-block__subtitle{
     white-space: nowrap;
@@ -226,11 +229,20 @@
       margin: 10px 10px 30px;
     }
   }
+  .payment-grid-block__town{
+    margin-bottom: 20px;
+  }
 }
 
 
 @media screen and (max-width: 826px){
   .payment-grid-block:nth-child(3){
-    margin-top: 0;
+    //margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .payment-grid-block{
+    flex: 1;
   }
 }

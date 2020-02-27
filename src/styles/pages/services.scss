@@ -212,6 +212,9 @@
   }
 }
 @media screen and (max-width: 600px){
+  .general-form-row-2 .general-form-label, .general-form-row-2 .general-form-checkblock{
+    margin: 0 0 15px;
+  }
   
   .general-form-row-2{
     display: block;
@@ -222,6 +225,9 @@
       margin-left: 0 !important;
       width: 100% !important;
     }
+  }
+  .general-form-row-2_gabarit>span{
+    margin: 10px auto 10px !important;
   }
   .general-form-selector__view{
     padding-right: 14px;
