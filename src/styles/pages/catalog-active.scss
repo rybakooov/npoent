@@ -289,7 +289,9 @@
 .catalog-active-filter__icon{
   cursor: pointer;
 }
-
+.catalog-active .catalog-active-filter-wrap .catalog-active-filter-item_last{
+  margin-right: 0 !important;
+}
 .catalog-block-table.catalog-block-table_grid .catalog-block-table-param-row__value{
   margin-left: auto;
 }
