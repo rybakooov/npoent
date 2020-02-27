@@ -8,7 +8,10 @@ $(document).ready(function(){
 
   
   $(document).on('click', '.header-nav-close__btn', function(){
-    $('.header-nav-wrap').slideUp();
+    var _this = $('.header-nav-wrap');
+    _this.slideUp(400, function() {
+      _this.attr('style', '');
+    });
     $('body').removeClass('body-overflow');
   })
 
@@ -117,6 +120,12 @@ $(document).ready(function(){
       {
         breakpoint: 600,
         settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
           slidesToShow: 2,
         }
       }
@@ -126,17 +135,22 @@ $(document).ready(function(){
   $('.patents__item:not(.slick-cloned)').fancybox({});
   /* partners-slider on main end */
 
-
   /* footer lists */
 
   $(document).on('click', '.footer-linklist__header', function(){
 
     if($(this).next('.footer-linklist').hasClass('opened')){
-      $(this).next('.footer-linklist').slideUp();
+      var _this = $(this).next('.footer-linklist')
+      _this.slideUp(400, function() {
+        _this.attr('style', '');
+      });
       $(this).next('.footer-linklist').removeClass('opened');
     } else {
       if($('.footer-linklist.opened').length){
-        $('.footer-linklist.opened').slideUp();
+        var _this = $('.footer-linklist.opened');
+        _this.slideUp(400, function() {
+          _this.attr('style', '');
+        });
         $('.footer-linklist.opened').removeClass('opened');
 
         
@@ -295,7 +309,10 @@ $(document).ready(function(){
   })
   
   $(document).on('click', '.catalog-active-filter-wrap__close', function(){
-    $(this).closest('.catalog-active-filter-wrap').slideUp('fast');
+    var _this = $(this).closest('.catalog-active-filter-wrap');
+    _this.slideUp(200, function() {
+      _this.attr('style', '');
+    });
     $('body').removeClass('body-overflow');
   })
   /* sort close end */
@@ -305,13 +322,19 @@ $(document).ready(function(){
  /* акккордеоны в карточке товара */
   $(document).on('click', '.item-main-col_desc-full__open.item-main-col_desc-full__open_opened', function(){
     $(this).removeClass('item-main-col_desc-full__open_opened');
-    $(this).siblings('.item-main-col_desc-full__akkord').slideUp()
+    var _this = $(this).siblings('.item-main-col_desc-full__akkord');
+    _this.slideUp(400, function() {
+      _this.attr('style', '');
+    });
   })
 
 
   $(document).on('click', '.item-main-col_desc-full__open:not(.item-main-col_desc-full__open_opened)', function(){
     if($('.item-main-col_desc-full__open_opened').length){
-      $('.item-main-col_desc-full__open_opened').siblings('.item-main-col_desc-full__akkord').slideUp();
+      var _this = $('.item-main-col_desc-full__open_opened').siblings('.item-main-col_desc-full__akkord');
+      _this.slideUp(400, function() {
+        _this.attr('style', '');
+      });
       $('.item-main-col_desc-full__open_opened').removeClass('item-main-col_desc-full__open_opened');
     }
     $(this).addClass('item-main-col_desc-full__open_opened');

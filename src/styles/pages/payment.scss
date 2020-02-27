@@ -227,3 +227,10 @@
     }
   }
 }
+
+
+@media screen and (max-width: 826px){
+  .payment-grid-block:nth-child(3){
+    margin-top: 0;
+  }
+}
