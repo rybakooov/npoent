@@ -1,7 +1,7 @@
 .commonTB{
   position: relative;
   padding: 40px 0;
-  margin: 80px 0 !important;
+  margin: 30px 0 !important;
 
   &-body{
     max-width: 1550px;
@@ -9,6 +9,9 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    &-wrap{
+      padding-right: 20px;
+    }
     &__date{
       color: #6D6E71;
       font-size: 14px;
@@ -35,7 +38,7 @@
     &__subtitle{
       white-space: nowrap;
       font-weight: 300;
-      font-size: 35px;
+      font-size: 36px;
       line-height: 40px;
       color: #2A2A68;
       text-transform: uppercase;
@@ -77,13 +80,17 @@
     align-items: center;
     padding: 0 60px;
     &__img{
-      max-width: 100%;
+      max-width: none;
       max-height: 100%;
       margin: 0 auto;
     }
     &-wrap{
       position: relative;
-      max-height: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
     }
     &-white{
       width: 100%;
@@ -117,6 +124,15 @@
 }
 
 .commonTB{
+  &_ind1, &_dop {
+    .commonTB-img-wrap{
+      justify-content: flex-end;
+    }
+    .commonTB_dop .commonTB-body-wrap{
+      padding-right: 0;
+      padding-left: 20px;
+    }
+  }
   &_ind1{
     .commonTB-img-wrap{
       width: 40%;
@@ -248,8 +264,6 @@
   }
   
   &_dop{
-    .commonTB-body-textWrap{
-    }
     .commonTB-body__li{
       display: flex;
       align-items: center;
@@ -323,10 +337,22 @@
     line-height: 34px;
   }
 }
+
+@media screen and (max-width: 1195px){
+  
+  .centerTitle{
+    font-size: 36px !important;
+    line-height: 40px !important;
+  }
+  .commonTB-body__subtitle{
+    font-size: 26px;
+    line-height: 28px;
+  }
+}
+
 @media screen and (max-width: 1023px){
   .commonTB{
     
-    overflow-x: hidden;
   }
   
   .commonTB_ind2 .commonTB-img-wrap, .commonTB_ab1 .commonTB-img-wrap, .commonTB_ab2 .commonTB-img-wrap{
@@ -375,11 +401,10 @@
     line-height: 36px !important;
   }
 }
-
 @include w480{
   .centerTitle{
-    font-size: 26px !important;
-    line-height: 30px !important;
+    font-size: 28px !important;
+    line-height: 32px !important;
   }
   .commonTB-body__subtitle{
     font-size: 22px;
@@ -388,8 +413,14 @@
 }
 
 @media screen and (max-width: 600px){
+  .commonTB-img{
+    margin-top: 20px;
+  }
+  .commonTB-img__img{
+    width: 100%;
+  }
   .centerTitle{
-    font-size: 22px !important;
+    font-size: 25px !important;
     line-height: 26px !important;
     br{
       display: none;
