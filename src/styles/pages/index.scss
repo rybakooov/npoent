@@ -4,7 +4,7 @@ body{
 
 .index-banner{
   position: relative;
-  padding-bottom: 105px;
+  //padding-bottom: 105px;
   &:after{
     content: '';
     display: block;
@@ -156,7 +156,7 @@ body{
     }
     &-item{
       position: relative;
-      height: 235px;
+      //height: 235px;
       width: calc(100% / 6 - 20px);
       overflow: visible;
       &:hover{
@@ -483,7 +483,7 @@ body{
     min-height: 400px;
   }
   .index-banner{
-    padding-bottom: 4vmax;
+    //padding-bottom: 4vmax;
   }
   .index-banner .banner-slider-item-wrap{
     padding: 20px 20px 0; 
@@ -531,7 +531,12 @@ body{
   }
   
 }
-
+@media screen and (min-width: 768px){
+  .index-banner .sixtangles-blocks{
+    margin-top: -8vmax;
+    position: static;
+  }
+}
 @media screen and (max-width: 1279px){
   
   .sixtangles-blocks-item{
@@ -565,7 +570,7 @@ body{
 }
 @media screen and (max-width: 1023px){
   .index-banner{
-    padding-bottom: 4vmax;
+    //padding-bottom: 4vmax;
   }
   
   .index-banner .banner-slider-item{

@@ -326,7 +326,7 @@ sub { vertical-align: baseline; position: relative; bottom: -0.4em; }
 
 @include w1366{
   .item-main-col:first-child{
-    width: 430px;
+    width: calc(100% / 9 * 4);
     flex-shrink: 0;
   }
   .item-main-col_desc-full-block-row{
@@ -373,6 +373,9 @@ sub { vertical-align: baseline; position: relative; bottom: -0.4em; }
   text-align: center;
 }
 @include w768{
+  .item-main-col-last__btn{
+    bottom: -19px;
+  }
   .item-main-col:first-child{
     width: 380px;
   }

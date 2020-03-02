@@ -632,5 +632,30 @@ $(document).ready(function(){
   })
 
   /* hover services end */
+
+
+
+  /*sixtanglex index banner*/
+
+  if($(window).width() > 767){
+    $('.index-banner .sixtangles-blocks-item').each(function(){
+      $(this).css('height', $(this).find('.sixtangles-svg').height() + 'px');
+    })
+    
+  }
+
+  $(window).resize(function(){
+    if($(window).width() > 767){
+      $('.index-banner .sixtangles-blocks-item').each(function(){
+        $(this).css('height', $(this).find('.sixtangles-svg').height() + 'px');
+      })
+    } else {
+      $('.index-banner .sixtangles-blocks-item').each(function(){
+        $(this).css('height', 'auto');
+      })
+    }
+  })
+
+  /*sixtanglex index banner end*/
 });
 
